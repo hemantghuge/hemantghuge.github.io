@@ -1,0 +1,247 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+>>
+/Contents 6 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<<
+/Length 2500
+>>
+stream
+BT
+/F1 24 Tf
+50 720 Td
+(HEMANT GHUGE) Tj
+0 -30 Td
+/F2 12 Tf
+(AI Engineer & Product Thinker) Tj
+0 -20 Td
+(Email: hemant@example.com | LinkedIn: linkedin.com/in/hemantghuge) Tj
+0 -15 Td
+(GitHub: github.com/hemantghuge | Location: India) Tj
+
+0 -40 Td
+/F1 14 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -20 Td
+/F2 10 Tf
+(Senior AI Engineer with 5+ years of experience developing and deploying) Tj
+0 -12 Td
+(large-scale computer vision and machine learning solutions. Proven track) Tj
+0 -12 Td
+(record of delivering AI systems across 9000+ ATMs and 1200+ retail locations,) Tj
+0 -12 Td
+(impacting millions of daily transactions. Currently transitioning into product) Tj
+0 -12 Td
+(management, combining deep technical expertise with growing product sense.) Tj
+
+0 -30 Td
+/F1 14 Tf
+(PROFESSIONAL EXPERIENCE) Tj
+
+0 -20 Td
+/F1 12 Tf
+(Senior AI Engineer) Tj
+200 0 Td
+/F2 10 Tf
+(2024 - Present) Tj
+-200 -15 Td
+/F2 10 Tf
+(• Leading GenAI product development initiatives) Tj
+0 -12 Td
+(• Managing cross-functional product teams) Tj
+0 -12 Td
+(• Defining product roadmap and strategy) Tj
+0 -12 Td
+(• Mentoring junior engineers and product team members) Tj
+
+0 -20 Td
+/F1 12 Tf
+(AI Engineer) Tj
+200 0 Td
+/F2 10 Tf
+(2020 - 2024) Tj
+-200 -15 Td
+/F2 10 Tf
+(• Deployed AI systems across 9000+ ATMs and 1200+ stores) Tj
+0 -12 Td
+(• Developed edge AI solutions for real-time processing) Tj
+0 -12 Td
+(• Optimized computer vision models for production environments) Tj
+0 -12 Td
+(• Led technical architecture and system design decisions) Tj
+
+0 -20 Td
+/F1 12 Tf
+(Software Engineer) Tj
+200 0 Td
+/F2 10 Tf
+(2018 - 2020) Tj
+-200 -15 Td
+/F2 10 Tf
+(• Developed full-stack web applications) Tj
+0 -12 Td
+(• Implemented ML models and data pipelines) Tj
+0 -12 Td
+(• Designed scalable software architectures) Tj
+0 -12 Td
+(• Collaborated with cross-functional teams) Tj
+
+0 -30 Td
+/F1 14 Tf
+(KEY PROJECTS) Tj
+
+0 -20 Td
+/F1 12 Tf
+(ATM Vision System) Tj
+0 -15 Td
+/F2 10 Tf
+(• Computer vision solution deployed across 9000+ ATMs) Tj
+0 -12 Td
+(• Real-time transaction monitoring and security enhancement) Tj
+0 -12 Td
+(• 99.7% accuracy rate with 40% reduction in security incidents) Tj
+
+0 -20 Td
+/F1 12 Tf
+(Pickup Assist GenAI) Tj
+0 -15 Td
+/F2 10 Tf
+(• GenAI-powered product for optimizing pickup operations) Tj
+0 -12 Td
+(• 30% efficiency improvement across 1200+ retail locations) Tj
+0 -12 Td
+(• Led cross-functional product development and strategy) Tj
+
+0 -20 Td
+/F1 12 Tf
+(Fire Rescue System - ICCUBEA Best Paper Award) Tj
+0 -15 Td
+/F2 10 Tf
+(• Automated fire rescue system for high-rise buildings) Tj
+0 -12 Td
+(• 60% reduction in emergency response time) Tj
+0 -12 Td
+(• 98.5% accuracy in fire detection and location) Tj
+
+0 -30 Td
+/F1 14 Tf
+(TECHNICAL SKILLS) Tj
+
+0 -20 Td
+/F1 12 Tf
+(AI & Machine Learning:) Tj
+0 -15 Td
+/F2 10 Tf
+(TensorFlow, PyTorch, OpenCV, Computer Vision, Deep Learning, Edge AI) Tj
+
+0 -15 Td
+/F1 12 Tf
+(Programming Languages:) Tj
+0 -12 Td
+/F2 10 Tf
+(Python, JavaScript, C++, SQL, MATLAB) Tj
+
+0 -15 Td
+/F1 12 Tf
+(Cloud & Infrastructure:) Tj
+0 -12 Td
+/F2 10 Tf
+(AWS, Docker, Kubernetes, Linux, Git) Tj
+
+0 -15 Td
+/F1 12 Tf
+(Product & Leadership:) Tj
+0 -12 Td
+/F2 10 Tf
+(Product Strategy, Team Leadership, Agile/Scrum, User Research) Tj
+
+0 -30 Td
+/F1 14 Tf
+(CERTIFICATIONS & AWARDS) Tj
+
+0 -20 Td
+/F2 10 Tf
+(• ICCUBEA Best Paper Award - Fire Rescue System Research) Tj
+0 -12 Td
+(• MathWorks Excellence Award - Technical Innovation) Tj
+0 -12 Td
+(• eYantra & Robocon Recognition - Robotics Excellence) Tj
+0 -12 Td
+(• Deep Learning Onramp - MathWorks Certified) Tj
+0 -12 Td
+(• Simulink Certified - Model-based Design) Tj
+0 -12 Td
+(• TensorFlow Developer Certificate) Tj
+
+0 -30 Td
+/F1 14 Tf
+(LANGUAGES) Tj
+0 -15 Td
+/F2 10 Tf
+(English (Fluent), Hindi (Native), Marathi (Native)) Tj
+
+ET
+endstream
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000274 00000 n 
+0000000351 00000 n 
+0000000423 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+>>
+startxref
+2977
+%%EOF

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemant Ghuge - AI Engineer & Product Thinker</title>
+    <meta name="description" content="Senior AI Engineer and aspiring Product Manager with expertise in computer vision, edge AI, and product delivery. 9000+ ATMs, 1200+ stores deployed.">
+    <meta name="keywords" content="AI Engineer, Product Manager, Computer Vision, Edge AI, Machine Learning, Portfolio">
+    <meta name="author" content="Hemant Ghuge">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Hemant Ghuge - AI Engineer & Product Thinker">
+    <meta property="og:description" content="Senior AI Engineer and aspiring Product Manager with expertise in computer vision, edge AI, and product delivery.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Hemant Ghuge - AI Engineer & Product Thinker">
+    <meta property="twitter:description" content="Senior AI Engineer and aspiring Product Manager with expertise in computer vision, edge AI, and product delivery.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e1b4b', // Deep Indigo
+                        'secondary': '#3730a3', // Electric Blue
+                        'accent': '#f59e0b', // Warm Yellow
+                        'coral': '#fb7185', // Soft Coral
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-primary">Hemant Ghuge</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link active text-primary font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-primary transition-colors">About</a>
+                    <a href="projects.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="resume.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Resume</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="projects.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Projects</a>
+                <a href="resume.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Resume</a>
+                <a href="contact.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary via-secondary to-indigo-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="block">Hemant Ghuge</span>
+                    <span class="block text-2xl md:text-3xl font-medium text-blue-200 mt-2">
+                        AI Engineer. Product Thinker. Mentor.
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Senior AI Engineer with real-world impact across thousands of deployments. 
+                    Passionate about building products that matter.
+                </p>
+                
+                <!-- Metrics Strip -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-accent">9000+</div>
+                        <div class="text-blue-200">ATMs Deployed</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-coral">1200+</div>
+                        <div class="text-blue-200">Stores Connected</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                        <div class="text-3xl font-bold text-accent">1600+</div>
+                        <div class="text-blue-200">Edge Devices</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="projects.html" class="bg-accent hover:bg-yellow-600 text-primary font-semibold px-8 py-3 rounded-lg transition-colors">
+                        View Projects
+                    </a>
+                    <a href="assets/resume/hemant-ghuge-resume.pdf" download class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI & Product Snapshot -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Where AI Meets Product Vision
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Bridging the gap between cutting-edge AI technology and meaningful product experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- AI Card -->
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-8 text-white hover:shadow-2xl transition-shadow">
+                    <div class="mb-6">
+                        <i class="fas fa-brain text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">AI Engineering</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            Computer Vision & Edge AI
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            ATM Vision Systems
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            Safety Monitoring Solutions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            TensorFlow & Deep Learning
+                        </li>
+                    </ul>
+                    <a href="projects.html#ai" class="inline-flex items-center text-accent hover:text-yellow-400 font-medium">
+                        Explore AI Projects <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Product Card -->
+                <div class="bg-gradient-to-br from-coral to-pink-500 rounded-xl p-8 text-white hover:shadow-2xl transition-shadow">
+                    <div class="mb-6">
+                        <i class="fas fa-rocket text-4xl text-accent mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4">Product Leadership</h3>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            GenAI Product Development
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            Cross-functional Team Leadership
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            User-Centric Design Thinking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-accent mr-3"></i>
+                            Product Strategy & Roadmapping
+                        </li>
+                    </ul>
+                    <a href="projects.html#product" class="inline-flex items-center text-accent hover:text-yellow-400 font-medium">
+                        View Product Work <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick Connect Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Let's Build Something Meaningful</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Whether you're looking for AI expertise, product leadership, or mentorship – I'm here to help.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                    Let's Connect
+                </a>
+                <a href="about.html" class="bg-white hover:bg-gray-50 text-primary border-2 border-primary font-semibold px-8 py-3 rounded-lg transition-colors">
+                    Learn More About Me
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hemant Ghuge</h3>
+                    <p class="text-blue-200 mb-4">
+                        AI Engineer & Product Thinker building impactful solutions at scale.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:hemant@example.com" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-blue-200 hover:text-accent transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-blue-200 hover:text-accent transition-colors">Projects</a></li>
+                        <li><a href="resume.html" class="text-blue-200 hover:text-accent transition-colors">Resume</a></li>
+                        <li><a href="contact.html" class="text-blue-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+                    <p class="text-blue-200 mb-2">Open to opportunities in:</p>
+                    <ul class="text-blue-200 space-y-1">
+                        <li>• Product Management</li>
+                        <li>• AI Engineering</li>
+                        <li>• Technical Leadership</li>
+                        <li>• Mentoring & Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-blue-200">
+                    © 2025 Hemant Ghuge. Built with passion and purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

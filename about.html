@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hemant Ghuge</title>
+    <meta name="description" content="Learn about Hemant Ghuge's journey from AI Engineer to Product Leader. Awards, certifications, and personal values.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e1b4b',
+                        'secondary': '#3730a3',
+                        'accent': '#f59e0b',
+                        'coral': '#fb7185',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-primary">Hemant Ghuge</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="nav-link active text-primary font-medium">About</a>
+                    <a href="projects.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="resume.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Resume</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 text-primary font-medium">About</a>
+                <a href="projects.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Projects</a>
+                <a href="resume.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Resume</a>
+                <a href="contact.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About Me</h1>
+            <p class="text-xl text-blue-200">
+                From AI Engineering to Product Leadership - A Journey of Impact and Innovation
+            </p>
+        </div>
+    </section>
+    
+    <!-- Profile Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-64 h-64 mx-auto lg:mx-0 mb-6 bg-gray-200 rounded-full flex items-center justify-center">
+                        <img src="assets/images/profile-placeholder.svg" alt="Hemant Ghuge" class="w-full h-full rounded-full object-cover">
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                        Bridging AI Innovation with Human-Centered Product Design
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        I'm a Senior AI Engineer with a passion for building products that create real-world impact. 
+                        Over the years, I've deployed AI solutions across thousands of ATMs and retail locations, 
+                        touching millions of user interactions daily.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        My journey has evolved from pure technical implementation to understanding the broader product ecosystem. 
+                        I believe the future belongs to leaders who can translate complex AI capabilities into simple, 
+                        meaningful user experiences.
+                    </p>
+                    
+                    <!-- Languages -->
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Languages</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full">English</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full">Hindi</span>
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-full">Marathi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Career Timeline -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Career Journey</h2>
+                <p class="text-xl text-gray-600">From Intern to Senior AI Engineer to Aspiring Product Leader</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary/20"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <!-- Current Role -->
+                    <div class="relative flex items-center">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-accent rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-star text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <span class="text-accent font-semibold">Present</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Senior AI Engineer</h3>
+                                <p class="text-gray-600 mb-3">Leading AI product development and exploring product management opportunities</p>
+                                <ul class="text-sm text-gray-500 space-y-1">
+                                    <li>• GenAI product development</li>
+                                    <li>• Cross-functional team leadership</li>
+                                    <li>• Product strategy and roadmapping</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Engineer Role -->
+                    <div class="relative flex items-center">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-secondary rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <span class="text-secondary font-semibold">2020-2024</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">AI Engineer</h3>
+                                <p class="text-gray-600 mb-3">Computer vision and edge AI solutions for financial and retail sectors</p>
+                                <ul class="text-sm text-gray-500 space-y-1">
+                                    <li>• 9000+ ATM deployments</li>
+                                    <li>• 1200+ retail store integrations</li>
+                                    <li>• Edge AI optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Junior Role -->
+                    <div class="relative flex items-center">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-coral rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-code text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <span class="text-coral font-semibold">2018-2020</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Software Engineer</h3>
+                                <p class="text-gray-600 mb-3">Full-stack development and machine learning model implementation</p>
+                                <ul class="text-sm text-gray-500 space-y-1">
+                                    <li>• ML model development</li>
+                                    <li>• Software architecture design</li>
+                                    <li>• System integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Intern -->
+                    <div class="relative flex items-center">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
+                            <div class="bg-white p-6 rounded-lg shadow-lg">
+                                <span class="text-primary font-semibold">2017-2018</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Engineering Intern</h3>
+                                <p class="text-gray-600 mb-3">Foundation in software development and research projects</p>
+                                <ul class="text-sm text-gray-500 space-y-1">
+                                    <li>• Research and development</li>
+                                    <li>• Academic project leadership</li>
+                                    <li>• Technical skill development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Values & Awards -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Values -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Core Values</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-accent/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-heart text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Impact First</h3>
+                                <p class="text-gray-600">Building technology that creates meaningful change in people's lives, not just impressive demos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-secondary/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-lightbulb text-secondary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Simplicity</h3>
+                                <p class="text-gray-600">Complex problems deserve elegant, simple solutions that anyone can understand and use.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-coral/20 p-3 rounded-lg mr-4 flex-shrink-0">
+                                <i class="fas fa-users text-coral text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">People-First</h3>
+                                <p class="text-gray-600">Technology should empower people, not replace them. Every solution starts with human needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mentoring -->
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Mentoring & Community</h3>
+                        <p class="text-gray-600 mb-4">
+                            I believe in giving back to the community. I regularly mentor engineering students and early-career professionals, 
+                            helping them navigate the intersection of AI and product development.
+                        </p>
+                        <p class="text-gray-600">
+                            I've also collaborated on podcasts and technical workshops, sharing insights about practical AI implementation 
+                            and product thinking.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Awards & Certifications -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Awards & Recognition</h2>
+                    <div class="space-y-6">
+                        <div class="bg-gradient-to-r from-accent/10 to-yellow-50 p-6 rounded-lg border-l-4 border-accent">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">ICCUBEA Best Paper Award</h3>
+                            <p class="text-gray-600 mb-2">Fire Rescue System for High-Rise Buildings</p>
+                            <span class="text-sm text-accent font-medium">Research Excellence</span>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-secondary/10 to-blue-50 p-6 rounded-lg border-l-4 border-secondary">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">MathWorks Award</h3>
+                            <p class="text-gray-600 mb-2">Outstanding Technical Innovation</p>
+                            <span class="text-sm text-secondary font-medium">Technical Excellence</span>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-coral/10 to-pink-50 p-6 rounded-lg border-l-4 border-coral">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">eYantra Recognition</h3>
+                            <p class="text-gray-600 mb-2">Robotics and Embedded Systems</p>
+                            <span class="text-sm text-coral font-medium">Innovation Award</span>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-primary/10 to-indigo-50 p-6 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">Robocon Achievement</h3>
+                            <p class="text-gray-600 mb-2">National Robotics Competition</p>
+                            <span class="text-sm text-primary font-medium">Team Leadership</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 text-center">
+                                <i class="fas fa-certificate text-accent mb-2"></i>
+                                <p class="text-sm font-medium">Deep Learning Onramp</p>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 text-center">
+                                <i class="fas fa-certificate text-secondary mb-2"></i>
+                                <p class="text-sm font-medium">Simulink Certified</p>
+                            </div>
+                            <div class="bg-white border border-gray-200 rounded-lg p-4 text-center">
+                                <i class="fas fa-certificate text-coral mb-2"></i>
+                                <p class="text-sm font-medium">TensorFlow Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Collaborate?</h2>
+            <p class="text-xl text-blue-200 mb-8">
+                Whether you're looking for AI expertise, product leadership, or mentorship, let's connect and build something meaningful together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-accent hover:bg-yellow-600 text-primary font-semibold px-8 py-3 rounded-lg transition-colors">
+                    Get In Touch
+                </a>
+                <a href="projects.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hemant Ghuge</h3>
+                    <p class="text-blue-200 mb-4">
+                        AI Engineer & Product Thinker building impactful solutions at scale.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:hemant@example.com" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-blue-200 hover:text-accent transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-blue-200 hover:text-accent transition-colors">Projects</a></li>
+                        <li><a href="resume.html" class="text-blue-200 hover:text-accent transition-colors">Resume</a></li>
+                        <li><a href="contact.html" class="text-blue-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+                    <p class="text-blue-200 mb-2">Open to opportunities in:</p>
+                    <ul class="text-blue-200 space-y-1">
+                        <li>• Product Management</li>
+                        <li>• AI Engineering</li>
+                        <li>• Technical Leadership</li>
+                        <li>• Mentoring & Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-blue-200">
+                    © 2025 Hemant Ghuge. Built with passion and purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="profileGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3730a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="avatarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#f3f4f6;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="200" fill="url(#profileGradient)"/>
+  
+  <!-- Profile Avatar -->
+  <circle cx="200" cy="200" r="180" fill="url(#avatarGradient)" stroke="#1e1b4b" stroke-width="4"/>
+  
+  <!-- Head -->
+  <circle cx="200" cy="160" r="50" fill="#1e1b4b" opacity="0.8"/>
+  
+  <!-- Body -->
+  <ellipse cx="200" cy="280" rx="70" ry="90" fill="#1e1b4b" opacity="0.8"/>
+  
+  <!-- Professional Elements -->
+  <!-- Glasses -->
+  <rect x="175" y="150" width="20" height="15" rx="2" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="205" y="150" width="20" height="15" rx="2" fill="none" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="195" y1="157" x2="205" y2="157" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- AI/Tech Symbols -->
+  <!-- Circuit patterns -->
+  <g opacity="0.3">
+    <circle cx="120" cy="120" r="3" fill="#f59e0b"/>
+    <circle cx="130" cy="130" r="2" fill="#f59e0b"/>
+    <circle cx="140" cy="110" r="2" fill="#f59e0b"/>
+    <line x1="120" y1="120" x2="130" y2="130" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="130" y1="130" x2="140" y2="110" stroke="#f59e0b" stroke-width="1"/>
+    
+    <circle cx="280" cy="120" r="3" fill="#f59e0b"/>
+    <circle cx="270" cy="130" r="2" fill="#f59e0b"/>
+    <circle cx="260" cy="110" r="2" fill="#f59e0b"/>
+    <line x1="280" y1="120" x2="270" y2="130" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="270" y1="130" x2="260" y2="110" stroke="#f59e0b" stroke-width="1"/>
+  </g>
+  
+  <!-- Professional Badge -->
+  <g transform="translate(320, 320)">
+    <circle cx="0" cy="0" r="25" fill="#1e1b4b"/>
+    <text x="0" y="0" text-anchor="middle" dy="0.3em" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">AI</text>
+  </g>
+  
+  <!-- Name Label -->
+  <text x="200" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Hemant Ghuge</text>
+  <text x="200" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f3f4f6">AI Engineer & Product Thinker</text>
+</svg>

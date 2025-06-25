@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Hemant Ghuge</title>
+    <meta name="description" content="Download Hemant Ghuge's resume. Senior AI Engineer with product management experience, certifications, and awards.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e1b4b',
+                        'secondary': '#3730a3',
+                        'accent': '#f59e0b',
+                        'coral': '#fb7185',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-primary">Hemant Ghuge</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Home</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-primary transition-colors">About</a>
+                    <a href="projects.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Projects</a>
+                    <a href="resume.html" class="nav-link active text-primary font-medium">Resume</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">About</a>
+                <a href="projects.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Projects</a>
+                <a href="resume.html" class="mobile-nav-link block px-3 py-2 text-primary font-medium">Resume</a>
+                <a href="contact.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Resume & Career</h1>
+            <p class="text-xl text-blue-200 mb-8">
+                A comprehensive overview of my professional journey, skills, and achievements
+            </p>
+            <a href="assets/resume/hemant-ghuge-resume.pdf" download class="bg-accent hover:bg-yellow-600 text-primary font-semibold px-8 py-4 rounded-lg transition-colors inline-flex items-center">
+                <i class="fas fa-download mr-3"></i>
+                Download PDF Resume
+            </a>
+        </div>
+    </section>
+    
+    <!-- Resume Summary -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Professional Summary -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Professional Summary</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Senior AI Engineer with 5+ years of experience in developing and deploying large-scale 
+                        computer vision and machine learning solutions. Proven track record of delivering 
+                        AI systems across 9000+ ATMs and 1200+ retail locations, impacting millions of daily transactions.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Currently transitioning into product management, combining deep technical expertise 
+                        with growing product sense to bridge the gap between AI capabilities and user needs. 
+                        Passionate about building products that create meaningful impact at scale.
+                    </p>
+                    
+                    <!-- Key Highlights -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-primary/5 p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">AI Engineering</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• 9000+ ATM deployments</li>
+                                <li>• Computer vision & edge AI</li>
+                                <li>• TensorFlow & deep learning</li>
+                                <li>• Real-time processing systems</li>
+                            </ul>
+                        </div>
+                        <div class="bg-coral/5 p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Product Leadership</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li>• GenAI product development</li>
+                                <li>• Cross-functional team leadership</li>
+                                <li>• User-centric design thinking</li>
+                                <li>• Product strategy & roadmapping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Facts -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Quick Facts</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Location</div>
+                                <div class="text-gray-600">India (Open to Remote)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-briefcase text-accent"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Experience</div>
+                                <div class="text-gray-600">5+ Years</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-secondary"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Education</div>
+                                <div class="text-gray-600">Engineering Degree</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coral/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-language text-coral"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-gray-900">Languages</div>
+                                <div class="text-gray-600">English, Hindi, Marathi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Timeline -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Professional Experience</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-primary/20"></div>
+                
+                <!-- Experience items -->
+                <div class="space-y-12">
+                    <!-- Senior AI Engineer -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-accent rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-star text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                            <div class="bg-white p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center justify-between md:flex-row-reverse mb-4">
+                                    <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Present</span>
+                                    <span class="text-gray-500">2024 - Present</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Senior AI Engineer</h3>
+                                <p class="text-coral font-medium mb-4">Leading AI Product Development</p>
+                                <p class="text-gray-600 mb-4">
+                                    Spearheading GenAI product development while transitioning into product management. Leading cross-functional teams and defining product strategy for AI-powered solutions.
+                                </p>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Leading GenAI product development initiatives</li>
+                                    <li>• Managing cross-functional product teams</li>
+                                    <li>• Defining product roadmap and strategy</li>
+                                    <li>• Mentoring junior engineers and product team members</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Engineer -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pl-8 md:ml-auto">
+                            <div class="bg-white p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">Core Role</span>
+                                    <span class="text-gray-500">2020 - 2024</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">AI Engineer</h3>
+                                <p class="text-primary font-medium mb-4">Computer Vision & Edge AI Solutions</p>
+                                <p class="text-gray-600 mb-4">
+                                    Developed and deployed large-scale computer vision systems for financial and retail sectors. Achieved significant impact with 9000+ ATM deployments and 1200+ retail integrations.
+                                </p>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Deployed AI systems across 9000+ ATMs and 1200+ stores</li>
+                                    <li>• Developed edge AI solutions for real-time processing</li>
+                                    <li>• Optimized computer vision models for production environments</li>
+                                    <li>• Led technical architecture and system design decisions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Software Engineer -->
+                    <div class="relative flex items-start">
+                        <div class="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-secondary rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                            <i class="fas fa-code text-white text-sm"></i>
+                        </div>
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                            <div class="bg-white p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center justify-between md:flex-row-reverse mb-4">
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">Growth</span>
+                                    <span class="text-gray-500">2018 - 2020</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Software Engineer</h3>
+                                <p class="text-secondary font-medium mb-4">Full-Stack Development & ML</p>
+                                <p class="text-gray-600 mb-4">
+                                    Built full-stack applications and implemented machine learning models. Gained comprehensive experience in software architecture and system integration.
+                                </p>
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Developed full-stack web applications</li>
+                                    <li>• Implemented ML models and data pipelines</li>
+                                    <li>• Designed scalable software architectures</li>
+                                    <li>• Collaborated with cross-functional teams</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills & Certifications -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Technical Skills</h2>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">AI & Machine Learning</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">TensorFlow</span>
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">PyTorch</span>
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">OpenCV</span>
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">Computer Vision</span>
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">Deep Learning</span>
+                                <span class="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm">Edge AI</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Programming Languages</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary px-3 py-2 rounded-lg text-sm">Python</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-2 rounded-lg text-sm">JavaScript</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-2 rounded-lg text-sm">C++</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-2 rounded-lg text-sm">SQL</span>
+                                <span class="bg-secondary/10 text-secondary px-3 py-2 rounded-lg text-sm">MATLAB</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Cloud & Infrastructure</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-accent/10 text-accent px-3 py-2 rounded-lg text-sm">AWS</span>
+                                <span class="bg-accent/10 text-accent px-3 py-2 rounded-lg text-sm">Docker</span>
+                                <span class="bg-accent/10 text-accent px-3 py-2 rounded-lg text-sm">Kubernetes</span>
+                                <span class="bg-accent/10 text-accent px-3 py-2 rounded-lg text-sm">Linux</span>
+                                <span class="bg-accent/10 text-accent px-3 py-2 rounded-lg text-sm">Git</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Product & Leadership</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-coral/10 text-coral px-3 py-2 rounded-lg text-sm">Product Strategy</span>
+                                <span class="bg-coral/10 text-coral px-3 py-2 rounded-lg text-sm">Team Leadership</span>
+                                <span class="bg-coral/10 text-coral px-3 py-2 rounded-lg text-sm">Agile/Scrum</span>
+                                <span class="bg-coral/10 text-coral px-3 py-2 rounded-lg text-sm">User Research</span>
+                                <span class="bg-coral/10 text-coral px-3 py-2 rounded-lg text-sm">Design Thinking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications & Awards -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Certifications & Awards</h2>
+                    
+                    <!-- Certifications -->
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Professional Certifications</h3>
+                        <div class="space-y-4">
+                            <div class="bg-primary/5 p-4 rounded-lg border-l-4 border-primary">
+                                <h4 class="font-semibold text-gray-900">Deep Learning Onramp</h4>
+                                <p class="text-gray-600">MathWorks - Advanced deep learning techniques and applications</p>
+                            </div>
+                            <div class="bg-secondary/5 p-4 rounded-lg border-l-4 border-secondary">
+                                <h4 class="font-semibold text-gray-900">Simulink Certified</h4>
+                                <p class="text-gray-600">MathWorks - Model-based design and simulation</p>
+                            </div>
+                            <div class="bg-accent/5 p-4 rounded-lg border-l-4 border-accent">
+                                <h4 class="font-semibold text-gray-900">TensorFlow Developer</h4>
+                                <p class="text-gray-600">Google - Machine learning model development and deployment</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Awards -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Awards & Recognition</h3>
+                        <div class="space-y-4">
+                            <div class="bg-gradient-to-r from-accent/10 to-yellow-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-trophy text-accent mr-2"></i>
+                                    <h4 class="font-semibold text-gray-900">ICCUBEA Best Paper Award</h4>
+                                </div>
+                                <p class="text-gray-600">Fire Rescue System for High-Rise Buildings - Research Excellence</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-secondary/10 to-blue-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-award text-secondary mr-2"></i>
+                                    <h4 class="font-semibold text-gray-900">MathWorks Excellence Award</h4>
+                                </div>
+                                <p class="text-gray-600">Outstanding Technical Innovation in Engineering Solutions</p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-coral/10 to-pink-50 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <i class="fas fa-medal text-coral mr-2"></i>
+                                    <h4 class="font-semibold text-gray-900">eYantra & Robocon Recognition</h4>
+                                </div>
+                                <p class="text-gray-600">Robotics and Embedded Systems Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download CTA -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Connect?</h2>
+            <p class="text-xl text-blue-200 mb-8">
+                Download my complete resume or get in touch to discuss opportunities in AI engineering or product management.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="assets/resume/hemant-ghuge-resume.pdf" download class="bg-accent hover:bg-yellow-600 text-primary font-semibold px-8 py-3 rounded-lg transition-colors inline-flex items-center justify-center">
+                    <i class="fas fa-download mr-3"></i>
+                    Download Full Resume
+                </a>
+                <a href="contact.html" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hemant Ghuge</h3>
+                    <p class="text-blue-200 mb-4">
+                        AI Engineer & Product Thinker building impactful solutions at scale.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com/hemantghuge" target="_blank" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:hemant@example.com" class="text-blue-200 hover:text-accent transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-blue-200 hover:text-accent transition-colors">About</a></li>
+                        <li><a href="projects.html" class="text-blue-200 hover:text-accent transition-colors">Projects</a></li>
+                        <li><a href="resume.html" class="text-blue-200 hover:text-accent transition-colors">Resume</a></li>
+                        <li><a href="contact.html" class="text-blue-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get In Touch</h4>
+                    <p class="text-blue-200 mb-2">Open to opportunities in:</p>
+                    <ul class="text-blue-200 space-y-1">
+                        <li>• Product Management</li>
+                        <li>• AI Engineering</li>
+                        <li>• Technical Leadership</li>
+                        <li>• Mentoring & Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-blue-200">
+                    © 2025 Hemant Ghuge. Built with passion and purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

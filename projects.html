@@ -20,16 +20,50 @@
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     
+    <style>
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-overlay {
+            background: linear-gradient(135deg, rgba(30, 27, 75, 0.9), rgba(55, 48, 163, 0.8));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #1e1b4b, #3730a3, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .badge-glow {
+            box-shadow: 0 0 15px rgba(30, 27, 75, 0.3);
+        }
+    </style>
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -37,27 +71,27 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="font-inter bg-gray-50 text-gray-900">
+<body class="font-poppins bg-white text-gray-900 leading-relaxed tracking-wide">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between h-20">
                 <div class="flex items-center">
-                    <a href="index.html" class="text-xl font-bold text-primary">Hemant Ghuge</a>
+                    <a href="index.html" class="text-2xl font-bold text-gradient hover:scale-105 transition-transform">Hemant Ghuge</a>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Home</a>
-                    <a href="about.html" class="nav-link text-gray-600 hover:text-primary transition-colors">About</a>
-                    <a href="projects.html" class="nav-link active text-primary font-medium">Projects</a>
-                    <a href="resume.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Resume</a>
-                    <a href="contact.html" class="nav-link text-gray-600 hover:text-primary transition-colors">Contact</a>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-primary transition-all text-lg font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-primary transition-all text-lg font-medium">About</a>
+                    <a href="projects.html" class="nav-link active text-primary font-semibold text-lg">Projects</a>
+                    <a href="resume.html" class="nav-link text-gray-600 hover:text-primary transition-all text-lg font-medium">Resume</a>
+                    <a href="contact.html" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all hover:shadow-lg">Contact</a>
                 </div>
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary focus:outline-none p-2">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -65,41 +99,67 @@
         </div>
         
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="md:hidden bg-white shadow-lg hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Home</a>
-                <a href="about.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">About</a>
-                <a href="projects.html" class="mobile-nav-link block px-3 py-2 text-primary font-medium">Projects</a>
-                <a href="resume.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Resume</a>
-                <a href="contact.html" class="mobile-nav-link block px-3 py-2 text-gray-600 hover:text-primary">Contact</a>
+        <div id="mobile-menu" class="md:hidden bg-white/95 backdrop-blur-md shadow-lg hidden">
+            <div class="px-6 pt-4 pb-6 space-y-4">
+                <a href="index.html" class="mobile-nav-link block px-4 py-3 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all">Home</a>
+                <a href="about.html" class="mobile-nav-link block px-4 py-3 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all">About</a>
+                <a href="projects.html" class="mobile-nav-link block px-4 py-3 text-primary font-semibold text-lg rounded-lg">Projects</a>
+                <a href="resume.html" class="mobile-nav-link block px-4 py-3 text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-all">Resume</a>
+                <a href="contact.html" class="mobile-nav-link block px-4 py-3 bg-primary text-white rounded-lg font-semibold text-center">Contact</a>
             </div>
         </div>
     </nav>
     
     <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Projects</h1>
-            <p class="text-xl text-blue-200">
-                Showcasing real-world AI implementations and product innovations that create meaningful impact
+    <section class="pt-32 pb-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-black mb-8 text-gray-900 tracking-tight">
+                My <span class="text-gradient">Projects</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+                Real-world AI implementations and product innovations that create meaningful impact across thousands of deployments
             </p>
+            
+            <!-- Stats Overview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-black text-primary mb-2">6+</div>
+                    <div class="text-gray-600 font-semibold">Major Projects</div>
+                </div>
+                <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-black text-coral mb-2">3</div>
+                    <div class="text-gray-600 font-semibold">Categories</div>
+                </div>
+                <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-black text-accent mb-2">5+</div>
+                    <div class="text-gray-600 font-semibold">Years Exp</div>
+                </div>
+                <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl font-black text-secondary mb-2">99%</div>
+                    <div class="text-gray-600 font-semibold">Success Rate</div>
+                </div>
+            </div>
         </div>
     </section>
     
     <!-- Filter Tabs -->
-    <section class="py-8 bg-white shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-center gap-4">
-                <button id="filter-all" class="filter-btn active bg-primary text-white px-6 py-3 rounded-lg font-medium transition-colors">
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-6">
+                <button id="filter-all" class="filter-btn active bg-primary text-white px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105 shadow-lg text-lg">
+                    <i class="fas fa-th-large mr-3"></i>
                     All Projects
                 </button>
-                <button id="filter-ai" class="filter-btn bg-gray-200 text-gray-700 hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button id="filter-ai" class="filter-btn bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105 text-lg">
+                    <i class="fas fa-brain mr-3"></i>
                     AI & ML
                 </button>
-                <button id="filter-product" class="filter-btn bg-gray-200 text-gray-700 hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button id="filter-product" class="filter-btn bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105 text-lg">
+                    <i class="fas fa-rocket mr-3"></i>
                     Product
                 </button>
-                <button id="filter-research" class="filter-btn bg-gray-200 text-gray-700 hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                <button id="filter-research" class="filter-btn bg-gray-100 text-gray-700 hover:bg-primary hover:text-white px-8 py-4 rounded-2xl font-bold transition-all hover:scale-105 text-lg">
+                    <i class="fas fa-flask mr-3"></i>
                     Research
                 </button>
             </div>
@@ -107,161 +167,317 @@
     </section>
     
     <!-- Projects Grid -->
-    <section class="py-16 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div id="projects-grid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
                 
                 <!-- ATM Vision System -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="ai">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="ATM Vision System" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">AI & ML</span>
-                            <div class="flex items-center text-accent">
-                                <i class="fas fa-star mr-1"></i>
-                                <span class="text-sm font-medium">Featured</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="ai">
+                    <div class="relative h-64 bg-gradient-to-br from-primary to-secondary overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="ATM Vision System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-eye text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">9000+ ATMs</h4>
+                                <p class="text-sm opacity-90">Deployed Globally</p>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">ATM Vision System</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        
+                        <!-- Featured Badge -->
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-accent text-primary px-3 py-1 rounded-full text-sm font-bold badge-glow">
+                                <i class="fas fa-star mr-1"></i>
+                                Featured
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-primary/10 text-primary px-4 py-2 rounded-xl text-sm font-bold">AI & ML</span>
+                            <div class="text-2xl">🤖</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">ATM Vision System</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             Computer vision solution deployed across 9000+ ATMs for transaction monitoring and security enhancement.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• Real-time transaction analysis</li>
-                            <li>• Edge AI optimization</li>
-                            <li>• 99.7% accuracy rate</li>
-                        </ul>
-                        <button onclick="openModal('atm-modal')" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                Real-time transaction analysis
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                Edge AI optimization
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-primary mr-3"></i>
+                                99.7% accuracy rate
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('atm-modal')" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>
                 </div>
                 
                 <!-- Pickup Assist GenAI -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="product">
-                    <div class="h-48 bg-gradient-to-br from-coral to-pink-500 flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="Pickup Assist GenAI" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-coral/10 text-coral px-3 py-1 rounded-full text-sm font-medium">Product</span>
-                            <div class="flex items-center text-accent">
-                                <i class="fas fa-rocket mr-1"></i>
-                                <span class="text-sm font-medium">Active</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="product">
+                    <div class="relative h-64 bg-gradient-to-br from-coral to-pink-500 overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="Pickup Assist GenAI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-truck text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">30% Faster</h4>
+                                <p class="text-sm opacity-90">Pickup Operations</p>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Pickup Assist GenAI</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        
+                        <!-- Active Badge -->
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold badge-glow">
+                                <i class="fas fa-rocket mr-1"></i>
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-coral/10 text-coral px-4 py-2 rounded-xl text-sm font-bold">Product</span>
+                            <div class="text-2xl">🚀</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Pickup Assist GenAI</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             GenAI-powered product for optimizing pickup operations across retail locations with intelligent routing.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• AI-driven route optimization</li>
-                            <li>• Cross-functional product leadership</li>
-                            <li>• 30% efficiency improvement</li>
-                        </ul>
-                        <button onclick="openModal('pickup-modal')" class="w-full bg-coral hover:bg-coral/90 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-coral mr-3"></i>
+                                AI-driven route optimization
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-coral mr-3"></i>
+                                Cross-functional product leadership
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-coral mr-3"></i>
+                                30% efficiency improvement
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('pickup-modal')" class="w-full bg-coral hover:bg-coral/90 text-white font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>
                 </div>
                 
                 <!-- Fire Rescue System -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="research">
-                    <div class="h-48 bg-gradient-to-br from-accent to-yellow-500 flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="Fire Rescue System" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium">Research</span>
-                            <div class="flex items-center text-coral">
-                                <i class="fas fa-award mr-1"></i>
-                                <span class="text-sm font-medium">Award Winner</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="research">
+                    <div class="relative h-64 bg-gradient-to-br from-accent to-yellow-500 overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="Fire Rescue System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-fire-extinguisher text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">60% Faster</h4>
+                                <p class="text-sm opacity-90">Response Time</p>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Fire Rescue System</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        
+                        <!-- Award Badge -->
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-yellow-400 text-primary px-3 py-1 rounded-full text-sm font-bold badge-glow">
+                                <i class="fas fa-award mr-1"></i>
+                                Award Winner
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-accent/10 text-accent px-4 py-2 rounded-xl text-sm font-bold">Research</span>
+                            <div class="text-2xl">🔬</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Fire Rescue System</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             ICCUBEA Best Paper Award winning research on automated fire rescue systems for high-rise buildings.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• IoT sensor integration</li>
-                            <li>• Automated rescue protocols</li>
-                            <li>• Published research paper</li>
-                        </ul>
-                        <button onclick="openModal('fire-modal')" class="w-full bg-accent hover:bg-yellow-600 text-primary font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                IoT sensor integration
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                Automated rescue protocols
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-accent mr-3"></i>
+                                Published research paper
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('fire-modal')" class="w-full bg-accent hover:bg-yellow-600 text-primary font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>
                 </div>
                 
                 <!-- Tarsyer Bridge -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="ai">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-blue-500 flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="Tarsyer Bridge" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">AI & ML</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="ai">
+                    <div class="relative h-64 bg-gradient-to-br from-secondary to-blue-500 overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="Tarsyer Bridge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-link text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">20+ Models</h4>
+                                <p class="text-sm opacity-90">Integrated</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Tarsyer Bridge</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-secondary/10 text-secondary px-4 py-2 rounded-xl text-sm font-bold">AI & ML</span>
+                            <div class="text-2xl">🌉</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Tarsyer Bridge</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             Advanced computer vision bridge for connecting multiple AI models and data processing pipelines.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• Multi-model integration</li>
-                            <li>• Real-time data processing</li>
-                            <li>• Scalable architecture</li>
-                        </ul>
-                        <button onclick="openModal('tarsyer-modal')" class="w-full bg-secondary hover:bg-secondary/90 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                Multi-model integration
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                Real-time data processing
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-secondary mr-3"></i>
+                                Scalable architecture
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('tarsyer-modal')" class="w-full bg-secondary hover:bg-secondary/90 text-white font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>
                 </div>
                 
                 <!-- Bag Counting System -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="ai">
-                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="Bag Counting System" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">AI & ML</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="ai">
+                    <div class="relative h-64 bg-gradient-to-br from-purple-600 to-purple-500 overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="Bag Counting System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-shopping-bag text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">99.8% Accuracy</h4>
+                                <p class="text-sm opacity-90">Counting Rate</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Automated Bag Counting</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-purple-100 text-purple-700 px-4 py-2 rounded-xl text-sm font-bold">AI & ML</span>
+                            <div class="text-2xl">🛍️</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Automated Bag Counting</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             Computer vision system for automated inventory counting in retail environments with high accuracy.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• Object detection & counting</li>
-                            <li>• Retail environment optimization</li>
-                            <li>• Inventory management integration</li>
-                        </ul>
-                        <button onclick="openModal('bag-modal')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                                Object detection & counting
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                                Retail environment optimization
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-purple-600 mr-3"></i>
+                                Inventory management integration
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('bag-modal')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>
                 </div>
                 
                 <!-- Safety Monitoring System -->
-                <div class="project-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden" data-category="ai">
-                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-500 flex items-center justify-center">
-                        <img src="assets/images/project-placeholder.svg" alt="Safety Monitoring System" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium">AI & ML</span>
+                <div class="project-card bg-white rounded-3xl shadow-xl overflow-hidden group" data-category="ai">
+                    <div class="relative h-64 bg-gradient-to-br from-green-600 to-green-500 overflow-hidden">
+                        <img src="assets/images/project-placeholder.svg" alt="Safety Monitoring System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white p-6">
+                                <i class="fas fa-hard-hat text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">95% Compliance</h4>
+                                <p class="text-sm opacity-90">Safety Rate</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">PPE Safety Monitoring</h3>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-green-100 text-green-700 px-4 py-2 rounded-xl text-sm font-bold">AI & ML</span>
+                            <div class="text-2xl">🦺</div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">PPE Safety Monitoring</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed font-medium">
                             Edge AI system for monitoring PPE compliance using camera feeds with real-time alerts and reporting.
                         </p>
-                        <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                            <li>• PPE detection & compliance</li>
-                            <li>• Edge camera integration</li>
-                            <li>• Real-time safety alerts</li>
-                        </ul>
-                        <button onclick="openModal('safety-modal')" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                                PPE detection & compliance
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                                Edge camera integration
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                                Real-time safety alerts
+                            </div>
+                        </div>
+                        
+                        <button onclick="openModal('safety-modal')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-2xl transition-all hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-arrow-right mr-2"></i>
                             View Details
                         </button>
                     </div>

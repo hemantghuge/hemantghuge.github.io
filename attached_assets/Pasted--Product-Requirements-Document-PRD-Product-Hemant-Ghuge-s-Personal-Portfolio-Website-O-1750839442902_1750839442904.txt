@@ -1,0 +1,173 @@
+# Product Requirements Document (PRD)
+
+**Product:** Hemant Ghuge's Personal Portfolio Website
+**Owner:** Hemant Ghuge
+**Prepared by:** Senior Product Manager & AI Portfolio Strategist
+**Platform:** Built on Replit (HTML/CSS/JS)
+**Last Updated:** June 2025
+
+---
+
+## 1. Problem Statement
+
+Hemant Ghuge is a senior AI engineer and aspiring product manager with a track record of real-world AI deployments and leadership in early-stage product delivery. However, his online presence is fragmented across LinkedIn, GitHub, and resume PDFs. This hinders seamless discovery, credibility, and collaboration.
+
+There is a need for a central, mobile-friendly portfolio site that authentically showcases Hemant's skills, projects, and vision, while serving multiple audiences (recruiters, collaborators, mentees).
+
+---
+
+## 2. Website Goals & Success Metrics
+
+### Goals:
+
+* Position Hemant as a hybrid tech-product leader
+* Highlight high-impact AI and product projects
+* Enable outreach and connection (recruiters, collaborators, students)
+* Serve as a living digital resume and personal brand hub
+
+### Success Metrics:
+
+* Resume downloads: 100+ in first 3 months
+* Contact/booking form submissions: 30+ per quarter
+* Avg. visit duration > 90 seconds
+* Bounce rate < 50%
+
+---
+
+## 3. User Personas
+
+### 🎯 Recruiter
+
+* Looking for senior AI or product talent
+* Needs to assess capabilities quickly
+* Downloads resume, browses projects
+
+### 🤝 Founder/Collaborator
+
+* Wants to validate Hemant's credibility
+* Interested in side project or consulting
+* Reviews past work, reads About section, contacts
+
+### 👨‍🎓 Student/Mentee
+
+* Seeking guidance or inspiration
+* Visits to learn about Hemant's journey and values
+* Books 1:1 or reads blogs
+
+---
+
+## 4. Information Architecture
+
+### 📌 Pages & Sections:
+
+1. **Home**
+
+   * Hero intro with CTA ("Let’s Connect" / "View Projects")
+   * Highlighted metrics (9000+ ATMs, 1200+ stores, etc.)
+   * AI | Product snapshot
+
+2. **About**
+
+   * Career story (AI engineer to aspiring PM)
+   * Values (impact, simplicity, people-first)
+   * Personal tidbits (mentoring, podcast collaborations)
+   * Languages: English, Hindi, Marathi
+   * Awards: Robocon, eYantra, MathWorks, ICCUBEA Best Paper
+
+3. **Projects**
+
+   * AI/ML (e.g. Tarsyer Bridge, ATM vision, Bag Counting)
+   * Product (Pickup Assist GenAI, internal tools)
+   * Research Project: Fire Rescue System for High-Rise Building (Best Paper winner)
+   * Safety Monitoring System (PPE compliance using edge cameras)
+
+4. **Resume & Career**
+
+   * Career timeline + highlights
+   * Certifications: Deep Learning Onramp, Simulink, TensorFlow
+   * Downloadable resume PDF
+
+5. **Contact**
+
+   * Embedded Calendly link
+   * Email, LinkedIn, GitHub
+   * Optional Typeform for specific requests
+
+6. **Blog/Thoughts** *(Optional for Phase 2)*
+
+   * Topics: AI x Product, career shift, personal reflections, Edge-AI trends
+
+---
+
+## 5. Functional Requirements
+
+* Responsive navigation with active state highlighting
+* Resume PDF download functionality
+* Project detail modals or separate project pages
+* Calendly embed or redirect with tracking
+* External link tracking (GitHub, LinkedIn)
+* Contact form (optional Typeform integration)
+
+---
+
+## 6. Non-Functional Requirements
+
+* Mobile-first design, fast loading (<2s TTI)
+* Accessibility (contrast ratios, alt tags, keyboard nav)
+* SEO optimized (semantic tags, meta info)
+* Minimal external dependencies for performance
+* Version-controlled code via GitHub (Replit deploy)
+
+---
+
+## 7. Wireframe Ideas (Low-Fidelity)
+
+**Home Page**
+
+* \[HEMANT GHUGE] — short tagline ("AI Engineer. Product Thinker. Mentor.")
+* Metric strip: "9000+ ATMs | 1200+ stores | 1600+ edge devices"
+* 2-card section: AI / Product → link to Projects
+* CTA button: "Download Resume" / "Book a Call"
+
+**About Page**
+
+* Left-aligned timeline (Intern → Senior AI Engineer → Exploring PM)
+* Right: Values, personal story, awards, languages, podcast or media link
+
+**Projects Page**
+
+* Filter tabs (AI, Product, Research)
+* Grid cards: Thumbnail + hover for short summary
+* Click → full-page detail or modal popup
+
+**Contact Page**
+
+* Left: Short message ("Let’s build something meaningful")
+* Right: Contact options (Calendly, Email, GitHub, LinkedIn)
+
+---
+
+## 8. Suggested Tech Stack (Replit)
+
+* HTML5 + Tailwind CSS (fast styling, responsive)
+* Vanilla JS or Alpine.js (lightweight interactions)
+* GitHub repo + Replit integration for CI/CD
+* PDF.js for resume preview (optional)
+* Calendly + Typeform embeds
+
+---
+
+## 9. Visual Tone / Branding
+
+* **Tone:** Clean, warm, human + technical
+* **Fonts:** Inter or Poppins for modern feel
+* **Colors:**
+
+  * Primary: Deep Indigo / Electric Blue
+  * Accent: Warm Yellow / Soft Coral
+  * Background: Light Gray / White
+* **Imagery:** Use real work screenshots (blur sensitive info), diagrams, and minimal icons
+
+---
+
+**End of PRD**

@@ -129,9 +129,36 @@ function handleContactFormSubmission(form, statusElement, messageElement) {
     setTimeout(() => {
         // For demo purposes, we'll show a success message
         // In production, this would be an actual API call
-        showFormStatus(statusElement, messageElement, 'success', 
-            'Thank you for your message! I\'ll get back to you within 24-48 hours.');
+        // showFormStatus(statusElement, messageElement, 'success', 
+        //     'Thank you for your message! I\'ll get back to you within 24-48 hours.');
         
+        // Production API call
+        fetch("https://formspree.io/f/xkgbkgqg", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                showFormStatus(statusElement, messageElement, 'success',
+                    'Thank you for your message! I\'ll get back to you within 24-48 hours.');
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    showFormStatus(statusElement, messageElement, 'error',
+                        data.error || 'Oops! Something went wrong.');
+                });
+            }
+        }).catch(() => {
+            showFormStatus(statusElement, messageElement, 'error',
+                'Oops! Something went wrong. Please try again.');
+        }).finally(() => {
+            const submitButton = form.querySelector('button[type="submit"]');
+            submitButton.textContent = 'Send Message';
+            submitButton.disabled = false;
+            submitButton.classList.remove('loading');
+        });
         // Reset form
         form.reset();
         

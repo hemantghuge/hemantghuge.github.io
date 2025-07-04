@@ -1,9 +1,34 @@
 // Projects page specific JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Hash-based filter selection ---
+    const hash = window.location.hash.replace('#', '');
+    const validFilters = ['all', 'ai', 'product', 'research', 'robotics'];
+    let defaultFilter = 'all';
+    if (validFilters.includes(hash)) {
+        defaultFilter = hash;
+    }
+    // Remove 'active' from all filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.classList.remove('active', 'bg-primary', 'text-white');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    // Add 'active' to the selected filter button
+    const selectedBtn = document.getElementById(`filter-${defaultFilter}`);
+    if (selectedBtn) {
+        selectedBtn.classList.add('active', 'bg-primary', 'text-white');
+        selectedBtn.classList.remove('bg-gray-100', 'text-gray-700');
+    }
+    // Filter projects on load
+    const projectCards = document.querySelectorAll('.project-card');
+    if (typeof filterProjects === 'function') {
+        filterProjects(defaultFilter, projectCards);
+    }
+    // --- End hash-based filter selection ---
+
     initializeProjectFiltering();
     initializeProjectModals();
     initializeProjectAnimations();
-    
     console.log('Projects page functionality initialized');
 });
 

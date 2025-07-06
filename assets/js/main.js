@@ -25,7 +25,7 @@ function initializeNavigation() {
                 mobileMenuButton.setAttribute('aria-expanded', 'true');
             } else {
                 mobileMenu.classList.add('hidden');
-                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl" style="pointer-events: none;"></i>';
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
         });
@@ -37,7 +37,7 @@ function initializeNavigation() {
             !mobileMenuButton.contains(event.target) && 
             !mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.add('hidden');
-            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl" style="pointer-events: none;"></i>';
             mobileMenuButton.setAttribute('aria-expanded', 'false');
         }
     });
@@ -46,7 +46,7 @@ function initializeNavigation() {
     window.addEventListener('resize', function() {
         if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
             mobileMenu.classList.add('hidden');
-            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+            mobileMenuButton.innerHTML = '<i class="fas fa-bars text-xl" style="pointer-events: none;"></i>';
             mobileMenuButton.setAttribute('aria-expanded', 'false');
         }
     });
